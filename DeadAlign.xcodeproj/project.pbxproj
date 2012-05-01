@@ -13,6 +13,8 @@
 		845EFC51154F91FD001512DB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 845EFC4F154F91FD001512DB /* Credits.rtf */; };
 		845EFC54154F91FD001512DB /* DeadAlignAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC53154F91FD001512DB /* DeadAlignAppDelegate.m */; };
 		845EFC57154F91FD001512DB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845EFC55154F91FD001512DB /* MainMenu.xib */; };
+		845EFC5F154F9216001512DB /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC5E154F9216001512DB /* Task.m */; };
+		845EFC62154F9222001512DB /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC61154F9222001512DB /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +23,18 @@
 		845EFC43154F91FC001512DB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		845EFC44154F91FC001512DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		845EFC45154F91FD001512DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		845EFC48154F91FD001512DB /* DeadAlign-Info.plist */ = {isa = PBXFileReference; path = "DeadAlign-Info.plist"; sourceTree = "<group>"; };
+		845EFC48154F91FD001512DB /* DeadAlign-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeadAlign-Info.plist"; sourceTree = "<group>"; };
 		845EFC4A154F91FD001512DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		845EFC4C154F91FD001512DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		845EFC4E154F91FD001512DB /* DeadAlign-Prefix.pch */ = {isa = PBXFileReference; path = "DeadAlign-Prefix.pch"; sourceTree = "<group>"; };
+		845EFC4E154F91FD001512DB /* DeadAlign-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeadAlign-Prefix.pch"; sourceTree = "<group>"; };
 		845EFC50154F91FD001512DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		845EFC52154F91FD001512DB /* DeadAlignAppDelegate.h */ = {isa = PBXFileReference; path = DeadAlignAppDelegate.h; sourceTree = "<group>"; };
+		845EFC52154F91FD001512DB /* DeadAlignAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeadAlignAppDelegate.h; sourceTree = "<group>"; };
 		845EFC53154F91FD001512DB /* DeadAlignAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeadAlignAppDelegate.m; sourceTree = "<group>"; };
 		845EFC56154F91FD001512DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		845EFC5D154F9216001512DB /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		845EFC5E154F9216001512DB /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		845EFC60154F9222001512DB /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		845EFC61154F9222001512DB /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 			children = (
 				845EFC52154F91FD001512DB /* DeadAlignAppDelegate.h */,
 				845EFC53154F91FD001512DB /* DeadAlignAppDelegate.m */,
+				845EFC5D154F9216001512DB /* Task.h */,
+				845EFC5E154F9216001512DB /* Task.m */,
+				845EFC60154F9222001512DB /* TableViewController.h */,
+				845EFC61154F9222001512DB /* TableViewController.m */,
 				845EFC55154F91FD001512DB /* MainMenu.xib */,
 				845EFC47154F91FD001512DB /* Supporting Files */,
 			);
@@ -168,6 +178,8 @@
 			files = (
 				845EFC4D154F91FD001512DB /* main.m in Sources */,
 				845EFC54154F91FD001512DB /* DeadAlignAppDelegate.m in Sources */,
+				845EFC5F154F9216001512DB /* Task.m in Sources */,
+				845EFC62154F9222001512DB /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

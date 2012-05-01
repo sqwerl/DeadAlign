@@ -11,10 +11,14 @@
 @implementation DeadAlignAppDelegate
 
 @synthesize window = _window;
+@synthesize addButton;
+@synthesize removeButton;
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    [addButton setImage:[NSImage imageNamed:@"NSAddTemplate"]];
+    [removeButton setImage:[NSImage imageNamed:@"NSRemoveTemplate"]];
 }
 
 @end
