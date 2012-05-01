@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		845EFC41154F91FC001512DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845EFC40154F91FC001512DB /* Cocoa.framework */; };
+		845EFC4B154F91FD001512DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 845EFC49154F91FD001512DB /* InfoPlist.strings */; };
+		845EFC4D154F91FD001512DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC4C154F91FD001512DB /* main.m */; };
+		845EFC51154F91FD001512DB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 845EFC4F154F91FD001512DB /* Credits.rtf */; };
+		845EFC54154F91FD001512DB /* DeadAlignAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC53154F91FD001512DB /* DeadAlignAppDelegate.m */; };
+		845EFC57154F91FD001512DB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845EFC55154F91FD001512DB /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		845EFC3C154F91FC001512DB /* DeadAlign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeadAlign.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		845EFC40154F91FC001512DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		845EFC43154F91FC001512DB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		845EFC44154F91FC001512DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		845EFC45154F91FD001512DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		845EFC48154F91FD001512DB /* DeadAlign-Info.plist */ = {isa = PBXFileReference; path = "DeadAlign-Info.plist"; sourceTree = "<group>"; };
+		845EFC4A154F91FD001512DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		845EFC4C154F91FD001512DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845EFC4E154F91FD001512DB /* DeadAlign-Prefix.pch */ = {isa = PBXFileReference; path = "DeadAlign-Prefix.pch"; sourceTree = "<group>"; };
+		845EFC50154F91FD001512DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		845EFC52154F91FD001512DB /* DeadAlignAppDelegate.h */ = {isa = PBXFileReference; path = DeadAlignAppDelegate.h; sourceTree = "<group>"; };
+		845EFC53154F91FD001512DB /* DeadAlignAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeadAlignAppDelegate.m; sourceTree = "<group>"; };
+		845EFC56154F91FD001512DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		845EFC39154F91FC001512DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845EFC41154F91FC001512DB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		845EFC31154F91FB001512DB = {
+			isa = PBXGroup;
+			children = (
+				845EFC46154F91FD001512DB /* DeadAlign */,
+				845EFC3F154F91FC001512DB /* Frameworks */,
+				845EFC3D154F91FC001512DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		845EFC3D154F91FC001512DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				845EFC3C154F91FC001512DB /* DeadAlign.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		845EFC3F154F91FC001512DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				845EFC40154F91FC001512DB /* Cocoa.framework */,
+				845EFC42154F91FC001512DB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		845EFC42154F91FC001512DB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				845EFC43154F91FC001512DB /* AppKit.framework */,
+				845EFC44154F91FC001512DB /* CoreData.framework */,
+				845EFC45154F91FD001512DB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		845EFC46154F91FD001512DB /* DeadAlign */ = {
+			isa = PBXGroup;
+			children = (
+				845EFC52154F91FD001512DB /* DeadAlignAppDelegate.h */,
+				845EFC53154F91FD001512DB /* DeadAlignAppDelegate.m */,
+				845EFC55154F91FD001512DB /* MainMenu.xib */,
+				845EFC47154F91FD001512DB /* Supporting Files */,
+			);
+			path = DeadAlign;
+			sourceTree = "<group>";
+		};
+		845EFC47154F91FD001512DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				845EFC48154F91FD001512DB /* DeadAlign-Info.plist */,
+				845EFC49154F91FD001512DB /* InfoPlist.strings */,
+				845EFC4C154F91FD001512DB /* main.m */,
+				845EFC4E154F91FD001512DB /* DeadAlign-Prefix.pch */,
+				845EFC4F154F91FD001512DB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		845EFC3B154F91FC001512DB /* DeadAlign */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845EFC5A154F91FD001512DB /* Build configuration list for PBXNativeTarget "DeadAlign" */;
+			buildPhases = (
+				845EFC38154F91FC001512DB /* Sources */,
+				845EFC39154F91FC001512DB /* Frameworks */,
+				845EFC3A154F91FC001512DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeadAlign;
+			productName = DeadAlign;
+			productReference = 845EFC3C154F91FC001512DB /* DeadAlign.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		845EFC33154F91FB001512DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DeadAlign;
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = 845EFC36154F91FB001512DB /* Build configuration list for PBXProject "DeadAlign" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 845EFC31154F91FB001512DB;
+			productRefGroup = 845EFC3D154F91FC001512DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				845EFC3B154F91FC001512DB /* DeadAlign */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		845EFC3A154F91FC001512DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845EFC4B154F91FD001512DB /* InfoPlist.strings in Resources */,
+				845EFC51154F91FD001512DB /* Credits.rtf in Resources */,
+				845EFC57154F91FD001512DB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		845EFC38154F91FC001512DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845EFC4D154F91FD001512DB /* main.m in Sources */,
+				845EFC54154F91FD001512DB /* DeadAlignAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		845EFC49154F91FD001512DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845EFC4A154F91FD001512DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		845EFC4F154F91FD001512DB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845EFC50154F91FD001512DB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		845EFC55154F91FD001512DB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845EFC56154F91FD001512DB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		845EFC58154F91FD001512DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		845EFC59154F91FD001512DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		845EFC5B154F91FD001512DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeadAlign/DeadAlign-Prefix.pch";
+				INFOPLIST_FILE = "DeadAlign/DeadAlign-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		845EFC5C154F91FD001512DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeadAlign/DeadAlign-Prefix.pch";
+				INFOPLIST_FILE = "DeadAlign/DeadAlign-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		845EFC36154F91FB001512DB /* Build configuration list for PBXProject "DeadAlign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845EFC58154F91FD001512DB /* Debug */,
+				845EFC59154F91FD001512DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845EFC5A154F91FD001512DB /* Build configuration list for PBXNativeTarget "DeadAlign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845EFC5B154F91FD001512DB /* Debug */,
+				845EFC5C154F91FD001512DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 845EFC33154F91FB001512DB /* Project object */;
+}
