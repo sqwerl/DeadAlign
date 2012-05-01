@@ -7,6 +7,7 @@
 //
 
 #import "Task.h"
+#import "CustomSlidercell.h"
 
 @implementation Task
 
@@ -17,6 +18,7 @@
 @synthesize dueDate;
 @synthesize timer;
 @synthesize taskFinished;
+@synthesize seconds;
 
 
 -(id)init{
@@ -24,7 +26,6 @@
     if(self){
         done = [[NSButtonCell alloc] init];
         taskName = @"";
-        deadline = [[NSSliderCell alloc] init];
         dueDate = [NSDate dateWithTimeIntervalSince1970:1336806000];
         timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
         taskFinished = NO;
@@ -45,7 +46,7 @@
     }else if([components day] > 0){
         timeLeft = [NSString stringWithFormat:@"%d%c %d%c %d%c", [components hour], 'h', [components minute], 'm', [components second], 's'];
     }
-    
+    seconds = [components second];
 }
 
 

@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "Task.h"
+#import "CustomSliderCell.h"
 
 @implementation TableViewController
 
@@ -15,7 +16,7 @@
     self = [super init];
     if(self){
         taskArray = [[NSMutableArray alloc] init];
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateTimeLeft) userInfo:nil repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:.01 target:self selector:@selector(updateTimeLeft) userInfo:nil repeats:YES];
     }
     return self;
 }
@@ -44,9 +45,15 @@
 
 -(void)updateTimeLeft{
     if([taskArray count] >0){
-    [taskTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [taskArray count])] columnIndexes:[NSIndexSet indexSetWithIndex:3]];
+        [taskTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [taskArray count])] columnIndexes:[NSIndexSet indexSetWithIndex:3]];
+
+
+        [taskTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [taskArray count])] columnIndexes:[NSIndexSet indexSetWithIndex:2]];
+
     }
+    
 }
+
 
 
 -(IBAction)add:(id)sender{
@@ -72,21 +79,25 @@
 -(IBAction)setTaskDone:(id)sender{
     NSLog(@"%p", sender);
     Task *t = [taskArray objectAtIndex:[sender clickedRow]];
-    if(t.taskFinished == NO){
-        
-        t.taskFinished = YES;
-        NSLog(@"%@", t.taskFinished ? @"YES" : @"NO");
-    }else{
-        t.taskFinished = NO;
-        NSLog(@"%@", t.taskFinished ? @"YES" : @"NO");
-        
-    }
+
+    NSMutableDictionary *cb = [[NSMutableDictionary alloc] init];
+    [cb setObject:t forKey:@"t"];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(deleteSelected:) userInfo:cb repeats:NO];
 }
 
--(IBAction)clearFinished:(id)sender{
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"taskFinished == NO"];
-    [taskArray filterUsingPredicate:pred];
-
+-(IBAction)sliderChange:(id)sender{
+    Task *t = [taskArray objectAtIndex:[sender clickedRow]];
+    NSLog(@"%d", [[t deadline] intValue]);    
 }
+
+-(void)deleteSelected:(id)sender{
+    NSDictionary *dict = [sender userInfo];
+    Task *t = [dict objectForKey:@"t"];
+    [taskArray removeObject:t];
+    [taskTableView reloadData];
+}
+
+
 
 @end

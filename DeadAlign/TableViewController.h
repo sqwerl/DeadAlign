@@ -20,10 +20,11 @@
 
 -(IBAction)remove:(id)sender;
 
--(IBAction)clearFinished:(id)sender;
 -(IBAction)setTaskDone:(id)sender;
+-(IBAction)sliderChange:(id)sender;
 
 
 -(void)updateTimeLeft;
+-(void)deleteSelected:(id)sender;
 
 @end
