@@ -15,7 +15,6 @@
 		845EFC57154F91FD001512DB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845EFC55154F91FD001512DB /* MainMenu.xib */; };
 		845EFC5F154F9216001512DB /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC5E154F9216001512DB /* Task.m */; };
 		845EFC62154F9222001512DB /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC61154F9222001512DB /* TableViewController.m */; };
-		845EFC751550066F001512DB /* CustomSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EFC741550066F001512DB /* CustomSliderCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +35,6 @@
 		845EFC5E154F9216001512DB /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		845EFC60154F9222001512DB /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		845EFC61154F9222001512DB /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		845EFC731550066F001512DB /* CustomSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSliderCell.h; sourceTree = "<group>"; };
-		845EFC741550066F001512DB /* CustomSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSliderCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +92,6 @@
 				845EFC53154F91FD001512DB /* DeadAlignAppDelegate.m */,
 				845EFC5D154F9216001512DB /* Task.h */,
 				845EFC5E154F9216001512DB /* Task.m */,
-				845EFC731550066F001512DB /* CustomSliderCell.h */,
-				845EFC741550066F001512DB /* CustomSliderCell.m */,
 				845EFC60154F9222001512DB /* TableViewController.h */,
 				845EFC61154F9222001512DB /* TableViewController.m */,
 				845EFC55154F91FD001512DB /* MainMenu.xib */,
@@ -185,7 +180,6 @@
 				845EFC54154F91FD001512DB /* DeadAlignAppDelegate.m in Sources */,
 				845EFC5F154F9216001512DB /* Task.m in Sources */,
 				845EFC62154F9222001512DB /* TableViewController.m in Sources */,
-				845EFC751550066F001512DB /* CustomSliderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +266,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DeadAlign/DeadAlign-Prefix.pch";
 				INFOPLIST_FILE = "DeadAlign/DeadAlign-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,6 +278,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DeadAlign/DeadAlign-Prefix.pch";
 				INFOPLIST_FILE = "DeadAlign/DeadAlign-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

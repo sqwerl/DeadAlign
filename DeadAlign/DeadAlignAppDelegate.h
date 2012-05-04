@@ -11,7 +11,6 @@
 @interface DeadAlignAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSButton *addButton;
-@property (assign) IBOutlet NSButton *removeButton;
+
 
 @end

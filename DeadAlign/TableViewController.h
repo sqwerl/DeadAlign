@@ -8,21 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TableViewController : NSObject <NSTableViewDataSource>
+@interface TableViewController : NSObject <NSTableViewDataSource, NSDatePickerCellDelegate>
 {
-@private
+    IBOutlet NSBox*			outerBox;
+
     IBOutlet NSTableView *taskTableView;
     NSMutableArray *taskArray;
     NSTimer *timer;
+    IBOutlet NSDatePicker *datePicker;
 }
+
+@property (assign) IBOutlet NSDatePicker *datePicker;
+@property (assign) IBOutlet NSButton *addButton;
+@property (assign) IBOutlet NSButton *removeButton;
 
 -(IBAction)add:(id)sender;
 
 -(IBAction)remove:(id)sender;
 
 -(IBAction)setTaskDone:(id)sender;
--(IBAction)sliderChange:(id)sender;
+-(IBAction)setDate:(id)sender;
 
+
+
+-(void)setUpDatePicker;
 
 -(void)updateTimeLeft;
 -(void)deleteSelected:(id)sender;

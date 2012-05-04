@@ -14,24 +14,30 @@
 @private
     NSButtonCell *done;
     NSString *taskName;
-    IBOutlet CustomSliderCell *deadline;
+    IBOutlet NSLevelIndicatorCell *deadline;
     NSString *timeLeft;
     NSDate *dueDate;
-    NSTimer *timer;
     Boolean taskFinished;
-    int seconds;
+    NSNumber *level;
+    NSPopUpButtonCell *popup;
+
 }
+
+
 
 @property (copy) NSButtonCell *done;
 @property (copy) NSString *taskName;
-@property (copy) IBOutlet CustomSliderCell *deadline;
+@property (copy) IBOutlet NSLevelIndicatorCell *deadline;
 @property (copy) NSString *timeLeft;
 @property (copy) NSDate *dueDate;
-@property (copy) NSTimer *timer;
 @property Boolean taskFinished;
-@property int seconds;
+@property (copy) NSNumber *level;
+@property (copy) IBOutlet NSPopUpButtonCell *popup;
 
--(void)updateTimer;
+
+
+
 -(Boolean)isTaskFinished;
+-(double)getMaxLevel;
 
 @end
