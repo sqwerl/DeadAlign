@@ -16,7 +16,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [_window setBackgroundColor: NSColor.blueColor];
+}
+
+-(BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag{
+    if( !flag )
+        [_window makeKeyAndOrderFront:self];
+    
+    return YES;
 }
 
 @end
