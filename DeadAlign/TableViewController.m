@@ -8,6 +8,8 @@
 
 #import "TableViewController.h"
 #import "Task.h"
+#define BasicTableViewDragAndDropDataType @"BasicTableViewDragAndDropDataType"
+
 
 
 @implementation TableViewController
@@ -20,20 +22,74 @@
     if(self){
         taskArray = [[NSMutableArray alloc] init];
         timer = [NSTimer scheduledTimerWithTimeInterval:.01 target:self selector:@selector(updateTimeLeft) userInfo:nil repeats:YES];
-//        [self setUpDatePicker];
-
         
     }
     return self;
 }
 
 -(void)awakeFromNib{
+    [super awakeFromNib];
     [addButton setImage:[NSImage imageNamed:@"NSAddTemplate"]];
     [removeButton setImage:[NSImage imageNamed:@"NSRemoveTemplate"]];
-    [_datePicker setDateValue:[NSDate date]];
+    
+    NSDate *date = [NSDate date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
+    NSDateComponents *components = [gregorian components: NSUIntegerMax fromDate: date];
+    [components setHour: 14];
+    [components setMinute: 0];
+    [components setSecond: 0];
+    
+    NSDate *newDate = [gregorian dateFromComponents: components];
+    [_datePicker setDateValue:newDate];
+    
+    [taskTableView registerForDraggedTypes:[NSArray arrayWithObjects:BasicTableViewDragAndDropDataType, nil]];
 
 }
 
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rows toPasteboard:(NSPasteboard*)pboard {
+    // Drag and drop support
+
+
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:rows];
+    [pboard declareTypes:[NSArray arrayWithObject:BasicTableViewDragAndDropDataType] owner:self];
+    [pboard setData:data forType:BasicTableViewDragAndDropDataType];
+
+    
+    return YES;
+}
+
+- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
+    // Add code here to validate the drop
+    NSLog(@"validate Drop");
+    return NSDragOperationEvery;
+}
+
+- (BOOL)tableView:(NSTableView*)tv acceptDrop:(id <NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)op {
+    
+    // Add code here to accept the drop
+    NSPasteboard *pboard = [info draggingPasteboard];
+    NSData *data = [pboard dataForType:BasicTableViewDragAndDropDataType];
+    
+
+
+    id rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSUInteger fromRow = [rowIndexes firstIndex];
+    
+    Task *t = [taskArray objectAtIndex:fromRow];
+    [taskArray insertObject:t atIndex:row];
+    
+    if (fromRow > row) {
+        fromRow = fromRow + 1;
+    }
+    [taskArray removeObjectAtIndex:fromRow];
+    
+    
+    [taskTableView reloadData];
+    
+    [pboard clearContents];
+    
+    return YES;
+}
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
