@@ -30,6 +30,8 @@
 -(void)awakeFromNib{
     [addButton setImage:[NSImage imageNamed:@"NSAddTemplate"]];
     [removeButton setImage:[NSImage imageNamed:@"NSRemoveTemplate"]];
+    [_datePicker setDateValue:[NSDate date]];
+
 }
 
 
@@ -52,15 +54,15 @@
         return cellLevel;
     }else if([identifier isEqualToString:@"timeLeft"]){
         if([components month] > 0){
-            return [NSString stringWithFormat:@"%d%c %d%c %d%c %d%c %d%c", [components month], 'm', [components day], 'd', [components hour], 'h', [components minute], 'm', [components second], 's'];
+            return [NSString stringWithFormat:@"%lu%c %lu%c %lu%c %lu%c %lu%c", (long)[components month], 'm', (long)[components day], 'd', (long)[components hour], 'h', (long)[components minute], 'm', (long)[components second], 's'];
         }else if([components day] > 0){
-            return [NSString stringWithFormat:@"%d%c %d%c %d%c %d%c", [components day], 'd', [components hour], 'h', [components minute], 'm', [components second], 's'];
+            return [NSString stringWithFormat:@"%lu%c %lu%c %lu%c %lu%c", (long)[components day], 'd', (long)[components hour], 'h', (long)[components minute], 'm', (long)[components second], 's'];
         }else if([components hour] > 0){
-            return [NSString stringWithFormat:@"%d%c %d%c %d%c", [components hour], 'h', [components minute], 'm', [components second], 's'];
+            return [NSString stringWithFormat:@"%lu%c %lu%c %lu%c", (long)[components hour], 'h', (long)[components minute], 'm', (long)[components second], 's'];
         }else if([components minute] > 0){
-            return [NSString stringWithFormat:@"%d%c %d%c", [components minute], 'm', [components second], 's'];
+            return [NSString stringWithFormat:@"%lu%c %lu%c", (long)[components minute], 'm', (long)[components second], 's'];
         }else if([components second] > 0){
-            return [NSString stringWithFormat:@"%d%c", [components second], 's'];
+            return [NSString stringWithFormat:@"%lu%c", (long)[components second], 's'];
         }
     }
     return [p valueForKey:identifier];
@@ -117,30 +119,7 @@
     [t setDueDate:[sender dateValue]];
 }
 
--(void)setUpDatePicker{
 
-	
-	// create the date picker control if not created already
-	if (datePicker == nil)
-		datePicker = [[NSDatePicker alloc] init];
-		
-    
-	[datePicker setEnabled:YES];
-	
-	
-	[datePicker setDateValue: [NSDate dateWithTimeIntervalSince1970:1336806000]];	
-	
-	[datePicker setNeedsDisplay:YES];
-//	[self updateControls];	// force update of all UI elements and the picker itself
-	
-	
-	[datePicker setDelegate:self];
-	// or we can set us as the delegate to its cell like so:
-	[[datePicker cell] setDelegate:self];
-	
-	// we want to respond to date/time changes
-	[datePicker setAction:@selector(setDate:)];
-}
 
 -(void)deleteSelected:(id)sender{
     NSDictionary *dict = [sender userInfo];

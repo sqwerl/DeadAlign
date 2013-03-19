@@ -10,12 +10,10 @@
 
 @interface TableViewController : NSObject <NSTableViewDataSource, NSDatePickerCellDelegate>
 {
-    IBOutlet NSBox*			outerBox;
 
     IBOutlet NSTableView *taskTableView;
     NSMutableArray *taskArray;
     NSTimer *timer;
-    IBOutlet NSDatePicker *datePicker;
 }
 
 @property (assign) IBOutlet NSDatePicker *datePicker;
@@ -30,8 +28,6 @@
 -(IBAction)setDate:(id)sender;
 
 
-
--(void)setUpDatePicker;
 
 -(void)updateTimeLeft;
 -(void)deleteSelected:(id)sender;
