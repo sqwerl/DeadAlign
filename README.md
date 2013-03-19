@@ -1,3 +1,3 @@
 Visual deadline tracker
 
-![DeadAlign](/Screenshots/DeadAlign.png "DeadAlign")
+![DeadAlign](http://i.imgur.com/gwND1M5.jpg "DeadAlign")
