@@ -32,15 +32,7 @@
     [addButton setImage:[NSImage imageNamed:@"NSAddTemplate"]];
     [removeButton setImage:[NSImage imageNamed:@"NSRemoveTemplate"]];
     
-    NSDate *date = [NSDate date];
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
-    NSDateComponents *components = [gregorian components: NSUIntegerMax fromDate: date];
-    [components setHour: 14];
-    [components setMinute: 0];
-    [components setSecond: 0];
-    
-    NSDate *newDate = [gregorian dateFromComponents: components];
-    [_datePicker setDateValue:newDate];
+    [_datePicker setDateValue:[NSDate date]];
     
     [taskTableView registerForDraggedTypes:[NSArray arrayWithObjects:BasicTableViewDragAndDropDataType, nil]];
 
@@ -48,7 +40,6 @@
 
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rows toPasteboard:(NSPasteboard*)pboard {
     // Drag and drop support
-
 
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:rows];
     [pboard declareTypes:[NSArray arrayWithObject:BasicTableViewDragAndDropDataType] owner:self];
